@@ -29,7 +29,9 @@ jobs:
         git config user.email "actions@users.noreply.github.com"
         git add README.md
         git commit -am "Actualizar escudo de versión [skip ci]"
-        git push
+        git branch -M main  # O el nombre de tu rama principal
+        git push origin main  # O el nombre de tu rama principal
+
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
