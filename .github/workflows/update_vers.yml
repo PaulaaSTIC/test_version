@@ -18,7 +18,7 @@ jobs:
 
     - name: Actualizar escudo de versión
       run: |
-        version=$(grep -oP "(?<=\$number_version = ').*?(?=')" test_vers.php)
+        version=$(grep -oP '\$number_version = '\''\K[^'\'']+' test_vers.php)
         echo "![Version](https://img.shields.io/badge/Version-$version-blue)" > README-shield.md
 
     - name: Actualizar README.md
