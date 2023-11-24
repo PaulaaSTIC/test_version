@@ -20,17 +20,17 @@ jobs:
       run: |
         version=$(awk -F"'" '/\$number_version/{print $2}' test_vers.php)
         echo "![Version](https://img.shields.io/badge/Version-$version-blue)" > README-shield.md
-
-
     - name: Actualizar README.md
       run: |
         mv README-shield.md README.md
         git config user.name "GitHub Actions"
         git config user.email "actions@users.noreply.github.com"
+        git checkout main  # Asegúrate de usar el nombre correcto de tu rama principal
+        git pull origin main
         git add README.md
         git commit -am "Actualizar escudo de versión [skip ci]"
-        git branch -M main  # O el nombre de tu rama principal
         git push origin main  # O el nombre de tu rama principal
+
 
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
