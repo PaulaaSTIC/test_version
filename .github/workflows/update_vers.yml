@@ -26,8 +26,13 @@ jobs:
         mv README-shield.md README.md
         git config user.name "GitHub Actions"
         git config user.email "actions@users.noreply.github.com"
-        git checkout main  # Asegúrate de usar el nombre correcto de tu rama principal
-        git pull origin main
+        
+        # Asegúrate de usar el nombre correcto de tu rama principal
+        git checkout main  # O el nombre correcto de tu rama principal
+        
+        # Intenta hacer un pull solo si hay cambios en la rama principal
+        git pull origin main || true
+        
         git add README.md
         git commit -am "Actualizar escudo de versión [skip ci]"
-        git push origin main  # O el nombre de tu rama principal
+        git push origin main  # O el nombre correcto de tu rama principal
