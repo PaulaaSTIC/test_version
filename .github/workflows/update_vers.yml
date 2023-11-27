@@ -4,13 +4,13 @@ on:
   release:
     types:
       - released
+
 permissions:
   contents: read
 
 jobs:
   update-shield:
     runs-on: ubuntu-latest
-
 
     steps:
     - name: Checkout código
@@ -20,6 +20,7 @@ jobs:
       run: |
         version=$(awk -F"'" '/\$number_version/{print $2}' test_vers.php)
         echo "![Version](https://img.shields.io/badge/Version-$version-blue)" > README-shield.md
+
     - name: Actualizar README.md
       run: |
         mv README-shield.md README.md
@@ -30,11 +31,3 @@ jobs:
         git add README.md
         git commit -am "Actualizar escudo de versión [skip ci]"
         git push origin main  # O el nombre de tu rama principal
-
-
-
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
-
-    # - name: Run test suite
-    #   run: composer run-script test
