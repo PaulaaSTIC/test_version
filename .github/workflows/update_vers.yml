@@ -26,6 +26,9 @@ jobs:
         mv README-shield.md README.md
         git config user.name "GitHub Actions"
         git config user.email "actions@users.noreply.github.com"
+    
+        # Asegúrate de que la rama principal esté disponible localmente
+        git fetch origin main:main
         
         # Asegúrate de usar el nombre correcto de tu rama principal
         git checkout main  # O el nombre correcto de tu rama principal
