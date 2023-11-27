@@ -30,9 +30,7 @@ jobs:
         # Asegúrate de usar el nombre correcto de tu rama principal
         git checkout main  # O el nombre correcto de tu rama principal
         
-        # Intenta hacer un pull solo si hay cambios en la rama principal
-        git pull origin main || true
-        
         git add README.md
-        git commit -am "Actualizar escudo de versión [skip ci]"
+        git commit -m "Actualizar escudo de versión [skip ci]"
         git push origin main  # O el nombre correcto de tu rama principal
+
