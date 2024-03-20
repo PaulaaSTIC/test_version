@@ -1,11 +1,17 @@
 changelog:
+Qué ha cambiado en esta versión
+
   categories:
-    - title: 🏕 Features
+    - title: Mejoras introducidas para usuarios
       labels:
-        - '*'
+        - new feature
       exclude:
         labels:
           - dependencies
     - title: 👒 Dependencies
       labels:
         - dependencies
+    - title: Errores corregidos
+      labels:
+        - bug
+
