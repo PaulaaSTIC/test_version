@@ -3,7 +3,7 @@ nhancementchangelog:
   categories:
     - title: "Mejoras introducidas para usuarios"
       labels:
-        - "new feature"
+        - "enhancement"
       exclude:
         labels:
           - "dependencies"
