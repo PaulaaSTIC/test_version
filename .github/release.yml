@@ -1,4 +1,4 @@
-changelog:
+nhancementchangelog:
   title: "Qué ha cambiado en esta versión"
   categories:
     - title: "Mejoras introducidas para usuarios"
@@ -7,7 +7,7 @@ changelog:
       exclude:
         labels:
           - "dependencies"
-    - title: "👒 Dependencies"
+    - title: "Dependencies"
       labels:
         - "dependencies"
     - title: "Errores corregidos"
