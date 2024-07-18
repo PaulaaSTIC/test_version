@@ -1,11 +1,15 @@
 changelog:
+  title: "Qué ha cambiado en esta versión"
   categories:
-    - title: 🏕 Features
+    - title: "Mejoras introducidas para usuarios"
       labels:
-        - '*'
+        - "enhancement"
       exclude:
         labels:
-          - dependencies
-    - title: 👒 Dependencies
+          - "dependencies"
+    - title: "Dependencies"
       labels:
-        - dependencies
+        - "dependencies"
+    - title: "Errores corregidos"
+      labels:
+        - "bug"
